@@ -20,7 +20,8 @@ docker run -d -p 8000:8000 titanik-app:v1
 # AWS üzerinde Canlıya Alma
 
 - AWS üzerinde uygulamanın canlıya alınabilmesi için öncelikle [AWS EC2](https://us-east-1.console.aws.amazon.com/ec2/) servisi üzerinden 1GB RAM 1VCPU'ya sahip bir makine açılması gerekmektedir. Makine tipi olarak ücretsiz olduğu için t2.micro tercih edilebilir. 
-- Ayarlar yapılırken security group ayarında bütün portlar(önerilmez veya streamlit uygulamasının yayınlanacağı porta erişim verilmesi gerekmektedir. 
+- Ayarlar yapılırken security group ayarında bütün portlar(önerilmez veya fastapi uygulamasının yayınlanacağı porta erişim verilmesi gerekmektedir. Ayarlar ekteki görseldeki gibi yapılmalıdır.
+  - ![alt text](security-rules.png "Security Rules")
 - Makine açıldıktan sonra makineye ssh veya ec2-serial-console kullanılarak erişilebilir.
 - Amazon makineleri yüksek ihtimalle python3 yüklü olarak gelmektedir. Eğer gelmediyse internet üzerinden Debian/Linux makinelere nasıl python yükleneceğine bakabilirsiniz.
 - Makineye gerekli kodların çekilebilmesi için git yüklenir. 
